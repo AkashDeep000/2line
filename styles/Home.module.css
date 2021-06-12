@@ -1,0 +1,90 @@
+.header {
+.header {
+    grid-area: header;
+    width: 100%;
+    position: sticky;
+    background-color:white;
+    transition: top 0.3s;
+    min-height: 2.5rem;
+    z-index: +1111;
+    
+    height: 2rem;
+}
+.logo {
+  font-size: 1.5rem;
+  color:  rgb(255,83,119);
+  float: left;
+  padding-top: .5rem;
+  text-decoration: none;
+  margin-left: .5rem;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  color: rgb(255,83,119);
+  
+  background: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 0px .2rem 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: .8rem;
+  
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  visibility: hidden;
+  animation: 0s linear .3s forwards delayedShow ;
+}
+  
+  @keyframes delayedShow {
+  to {
+    visibility: visible;
+  }
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/*dropdownn:hover .tooltip {
+  display: block;
+  z-index: +999;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+/*ropdownwn:hover .dropdown {
+  margin-top: 10rem;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  
+  display: none;
+}
