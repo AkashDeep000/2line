@@ -1,0 +1,12 @@
+.testy {
+
+    color: red;
+  
+}
+/*
+.testy {
+  :global(.test) {
+    border: 2px solid red;
+  }
+}
+*/

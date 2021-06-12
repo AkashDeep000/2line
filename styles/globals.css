@@ -1,0 +1,250 @@
+
+  body{
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(80,80,80);
+  font-size: 1rem;
+  /*this is testing*/
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    position: sticky;
+    background-color:white;
+    transition: top 0.3s;
+    min-height: 2.5rem;
+    z-index: +1111;
+    
+    height: 2rem;
+}
+.logo {
+  font-size: 1.5rem;
+  color:  rgb(255,83,119);
+  float: left;
+  padding-top: .5rem;
+  text-decoration: none;
+  margin-left: .5rem;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  color: rgb(255,83,119);
+  
+  background: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 0px .2rem 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: .8rem;
+  
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  visibility: hidden;
+  animation: 0s linear .3s forwards delayedShow ;
+}
+  
+  @keyframes delayedShow {
+  to {
+    visibility: visible;
+  }
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/*dropdownn:hover .tooltip {
+  display: block;
+  z-index: +999;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+/*ropdownwn:hover .dropdown {
+  margin-top: 10rem;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  
+  display: none;
+}
+
+#scroll-nav{
+  grid-area: scroll-nav;
+    
+    position: sticky;
+    top: 0;
+    box-shadow: 0 .2rem .2rem  rgba(0,0,0,0.132);
+    background-color: rgb(238,240,240);
+    z-index: 0;
+    min-height: 4rem;
+   transition: top 0.3s;
+   
+}
+.scroll-nav-op {
+  padding: .1rem .3rem;
+   text-align: center;
+}
+/*#header-ads {
+  margin-top:2.6rem;
+  height: 75px;
+  display: none;
+}*/
+.tab {
+  margin-left: -2rem;
+  display: inline-block;
+}
+.tab label {
+  
+  font-weight: 500;
+  padding: .3rem .5rem;
+  background: rgb(238,240,240);
+  border-radius: .2rem .2rem 0 0;
+  position: relative;
+  margin: 0 .4rem;
+}
+.tab [type="radio"] {
+  opacity: 0;
+}
+.scroll-subop {
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  background: white;
+  right: 0;
+  height: 2rem;
+  
+  padding: .3rem .5rem 0 .5rem;
+  overflow: auto;
+  white-space: nowrap;
+}
+.scroll-subop a{
+  display: inline-block;
+  color: white;
+  background: rgb(255,89,136);
+  text-align: center;
+  font-weight: 500;
+  padding: .3rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  margin: 0 .25rem;
+}
+.scroll-subop > * {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+}
+
+.tab [type="radio"]:checked ~ label {
+  background: white;
+  
+  z-index: 2;
+}
+[type="radio"]:checked ~ label ~ .scroll-subop {
+  z-index: 1;
+}
+[type="radio"]:checked ~ label ~ .scroll-subop > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+.main {
+  text-align: center;
+  
+  margin-top: -1rem;
+}
+.main-head {
+  
+  color: white;
+  padding: 1rem;
+  background-color: #ecbfd7;
+background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23cb97b8' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.title {
+font-size: 1.3rem;
+}
+.description {
+  
+}
+
+.main-content {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  background: rgb(248,248,248);
+  padding: 1rem .6rem;
+  margin: 1rem .5rem 2.5rem .5rem;
+  box-shadow: 0 0 2rem rgb(197,209,210);
+}
+  .content-card {
+    
+    box-shadow: 0 0 .2rem  rgb(233,236,237);
+    background: white;
+    margin-bottom: 1rem;
+  }
+  .content-line {
+    padding: .5rem 2rem;
+    margin: 0;
+    text-align: center;
+    color: rgb(80,80,80);
+  }
+  .content-img {
+    width: calc(100% - 1rem);
+    margin: 0 .5rem;
+
+  }
+  .content-btn {
+    text-align: center;
+    
+    padding: .5rem 0;
+    color: rgb(200,206,207);
+  }
+  .content-btn button {
+    padding: .3rem .5rem;
+    background: white;
+    border: none;
+    cursor: none;
+    color: rgb(255,83,119);
+  }
+.sticky-nav {
+  grid-area: sticky-nav;
+  background: #fff;
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.154);
+  
+}
+
+@media screen and (min-width: 600px) {
+
+}
+  
