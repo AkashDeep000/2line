@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
   <>
    <Head>
- 
+
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
   <script src="https://cdn.jsdelivr.net/npm/eruda-dom"></script>
 <script>eruda.init();eruda.add(erudaDom);

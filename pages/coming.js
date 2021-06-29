@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import Header from "../components/Header.js";
-import StatusCard from "../components/StatusCard.js";
+import ComingSoon from "../components/ComingSoon.js";
 import MobileMenu from "../components/MobileMenu.js";
 import Footer from "../components/Footer.js";
 
@@ -55,12 +55,7 @@ export default function Home() {
       </div>
       <div class="contentBody">
       
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
+      <ComingSoon />
       
       </div>
    </div>

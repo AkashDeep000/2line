@@ -22,7 +22,9 @@ function useEsbuildLoader(config, options) {
 }
 
 module.exports = {
-  
+  images: {
+    domains: ['cdn.sharemyfeel.com'],
+  },
   
  experimental: { optimizeCss: true },
 	webpack: (config, { webpack }) => {

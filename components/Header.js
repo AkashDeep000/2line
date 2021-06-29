@@ -1,33 +1,32 @@
 import Link from 'next/link'
-import Head from 'next/head'
-import styles from '../styles/test.module.css'
+import { useState } from 'react'
+import MobileMenu from '../components/MobileMenu.js'
 
-const Header = ({ ... title}) => {
-
+export default function Test() {
+const [showMenu, setMenu] = useState(false);
 return (
+  
     <>
- <Head>
- <script src="/sticky-header.js"></script>
- </Head>
-<div className="header">
-    <Link href="/"><a className="logo" >2Liner</a></Link>
-<div className="dropdown" style={{float: 'right'}}>
-  <button className="dropbtn">☰</button>
-
-  <div className="dropdown-content">
-    
-  <a href="#https://modapk.vercel.app">Status</a>
-  <a href="#">Shayeri</a>
-  <a href="#">Quotes</a>
-    <a href="#">Wishes</a>
-  <a href="#">Events</a>
-    <a href="#">Examplemple</a>
-  <a href="#">Install App</a>
-  </div>
+    <div className="header">
+      <button className="navButton" onClick={() => setMenu(true)} >☰</button>
+      <Link href="/"><a className="logo" ><svg version="1.0" xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="4rem" fill="white" viewBox="0 0 741 214">
+         
+       <g id="logo">
+        <path d="M155.8 8.2c-2 .7-3.1 2-3.8 4.6-.8 2.5-1 33-.8 97l.3 93.4 2.4 1.9c2.2 1.8 4.6 1.9 51.6 1.9s49.4-.1 51.6-1.9c2.3-1.8 2.4-2.5 2.4-14.1 0-17.4 3.4-16-38.6-16H187V95.1c0-54.2-.3-80.8-1.1-82.9-.7-2-2.1-3.4-4.1-4.1-3.8-1.4-22.3-1.3-26 .1zM57 11.5c-18.3 3.5-33.7 15.7-42.6 34-6.9 14.2-6.3 15.4 8.7 19.6 16.2 4.4 16.7 4.2 21.2-6.8 3.2-8.2 7-12.6 13.6-15.9 4.5-2.3 6.5-2.7 13.2-2.7 14.5.2 20.8 6.4 21.7 21.4.5 9.5-1 16.3-5.5 25.1C83 94.5 74 105.7 39.5 146l-27 31.5-.3 12c-.3 11.1-.2 12.3 1.8 14.8l2.1 2.7h52.5c51.1 0 52.5-.1 54.4-2 1.8-1.8 2-3.3 2-13.3 0-8.2-.4-11.9-1.4-13.3-1.4-1.8-3.2-1.9-34.5-2.4l-33-.5L73.2 156c36.7-41.9 45.2-53.9 50.9-71.3 2.6-8 3.7-27.2 1.9-34.8-4.4-19.2-17.3-32.3-36.7-37.3-9-2.3-23.3-2.8-32.3-1.1zM273 51c-2 2-2 3.3-2 76.8v74.9l2.3 2.1c2.1 2 3.4 2.2 15 2.2 11.4 0 12.9-.2 14.7-2 2-2 2-3.3 2-77s0-75-2-77c-1.8-1.8-3.3-2-15-2s-13.2.2-15 2zM337 51.2c-2 2.2-2 3.1-2 76.8v74.7l2.3 2.1c2.1 2 3.4 2.2 14.3 2.2 18 0 16.3 5.3 16.6-51l.3-46.3 21.4 47.7c12.6 28.1 22.2 48.1 23.2 48.7 1 .5 9.4.9 18.8.9 15.8 0 17.3-.2 19.1-2 2-2 2-3.3 2-77s0-75-2-77c-1.8-1.8-3.3-2-14-2s-12.2.2-14 2c-1.9 1.9-2 3.3-2 48.2 0 26.1-.4 45.8-.9 45.3-.4-.6-10.2-21.6-21.6-46.7-11.3-25.1-21.5-46.4-22.4-47.2-1.5-1.3-4.7-1.6-19.4-1.6-16.8 0-17.7.1-19.7 2.2zM485.2 50.6l-2.2 1.5v75.5c0 74.1 0 75.4 2 77.4 1.9 1.9 3.3 2 48.4 2 55.9 0 50.9 1.4 51.4-14.2.3-9.3.2-10.6-1.8-13.1l-2.1-2.7H517v-34.9l28.1-.3 28.1-.3 1.9-2.4c1.6-1.9 1.9-4 1.9-12.5 0-15.5 1.9-14.6-32.3-14.6H517V79h63.9l2-2.6c1.8-2.3 2.1-4.1 2.1-12.6 0-9.2-.2-10.1-2.5-12.3l-2.4-2.5h-46.3c-40.3 0-46.6.2-48.6 1.6zM609 50.8l-2.5 2v150.4l2.4 1.9c2 1.6 4 1.9 14.5 1.9 18 0 16.6 2.3 16.6-28.1V154h9.8l9.7.1 18 25c9.9 13.8 18.9 25.7 20 26.5 1.4 1 5.6 1.4 16.2 1.4 13 0 14.5-.2 16.3-2 1.1-1.1 2-3 2-4.3 0-1.4-7.4-12.3-19.4-28.4l-19.4-26.1 4.7-3.1c11.3-7.3 18.1-18.5 20.1-33.2 3.2-23.2-6.5-43.1-25.8-52.8-12.4-6.2-19.5-7.3-51.7-7.8-28-.5-29.1-.4-31.5 1.5zm62.5 30c6.3 2.9 8.3 4.7 10.6 9.7 2.5 5.4 2.5 16.6 0 22.1-3.7 8.2-10.9 11.1-29.8 12.1l-12.3.6V77.8l13.3.4c10.9.3 14.1.8 18.2 2.6z"/></g></svg></a></Link>
+    <Link href="/"><a className="search" ><svg xmlns="http://www.w3.org/2000/svg" height="1.8rem" width="1.8rem">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="90%" y2="0%">
+      <stop offset="0%" stopColor="rgba(245, 51, 150, 1)" stopOpacity="100%" />
+      <stop offset="100%" stopColor="rgba(245, 125, 86, 1)" stopOpacity="100%" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#grad1)" d="M13 3C7.489 3 3 7.489 3 13s4.489 10 10 10a9.947 9.947 0 006.322-2.264l5.971 5.971a1 1 0 101.414-1.414l-5.97-5.97A9.947 9.947 0 0023 13c0-5.511-4.489-10-10-10zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8-8-3.57-8-8 3.57-8 8-8z"/></svg></a></Link>
+  
+  <Link href="/"><a className="saved" ><svg xmlns="http://www.w3.org/2000/svg" height="1.8rem" width="1.8rem">
+        
+  <path fill="url(#grad1)" d="M12 4.248C8.852-1.154 0 .423 0 7.192 0 11.853 5.571 16.619 12 23c6.43-6.381 12-11.147 12-15.808C24 .4 15.125-1.114 12 4.248z"/></svg></a></Link>
+{showMenu ? <MobileMenu setMenu={setMenu} /> : null}
 </div>
-</div>
-    <div className={styles.testy}>Testing</div>
-</>
+    </>
 )
 }
-export default Header;
