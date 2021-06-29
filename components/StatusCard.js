@@ -13,7 +13,7 @@ export default function StatusCard() {
   </p>
   <div className="cardImageContainer">
   <Image
-      className="cardImage animated-background"
+      className="cardImage animatedBackground"
       loader={myLoader}
       src="image/Change-Attitude-Quotes-Lovesove.webp-1623170874204.webp"
       alt="Picture of the author"

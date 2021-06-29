@@ -328,6 +328,26 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
     }
     
   }
-  .test {
-    height: 2000rem;
-  }
+  @keyframes placeHolderShimmer {
+  0% {
+background-position: 100% 0%;
+}
+99.99% {
+background-position: -30% 0%;
+}
+100% {
+background-position: 100% 0%;
+}
+}
+
+.animated-background {
+  background: rgb(240,240,240);
+background: linear-gradient(100deg, rgba(240,240,240,1) 0%, rgba(200,200,200,1) 7%, rgba(200,200,200,1) 13%, rgba(240,240,240,1) 25%);
+  background-size:900%;
+  background-position: 100% 0%;
+  animation: placeHolderShimmer 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  
+}
