@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+
 import Header from "../components/Header.js";
 import StatusCard from "../components/StatusCard.js";
 import MobileMenu from "../components/MobileMenu.js";
