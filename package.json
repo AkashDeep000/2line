@@ -20,7 +20,7 @@
     "less-loader": "^7.3.0",
     "mini-css-extract-plugin": "^1.6.0",
     "multer": "^1.4.2",
-    "next": "^10.2.3",
+    "next": "^11.0.1",
     "next-auth": "^3.26.1",
     "next-connect": "^0.10.1",
     "postcss-flexbugs-fixes": "^5.0.2",
