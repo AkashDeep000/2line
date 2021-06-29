@@ -19,7 +19,7 @@ export default function StatusCard() {
       alt="Picture of the author"
       width={500}
       height={500}
-      preload = {true}
+      priority = {true}
     />
   </div>
   <div className="cardButtom">
