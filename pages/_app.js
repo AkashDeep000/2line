@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
   <>
    <Head>
-<link rel="dns-prefetch" href="https://https://cdn.statically.io/">
+<link rel="dns-prefetch" href="https://https://cdn.statically.io/" />
 
 
 
