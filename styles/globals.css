@@ -240,13 +240,10 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
   }
   .cardImageContainer {
     padding: 0 1rem;
-    border-radius: .35rem;
   }
   .cardImage {
     
-    
     border-radius: .35rem;
-    
     
   }
   .cardButtom {
@@ -273,7 +270,7 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
     padding: 1rem;
   }
   
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 40rem) {
     
     .header {
       box-shadow: 0 0 3rem rgba(0,0,0,0.15);
@@ -300,6 +297,7 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
       position: sticky;
       top: 2.8rem !important;
       background: white;
+      width: 8rem;
     }
     .tabButtonWrap {
       padding-bottom: 0;
@@ -325,7 +323,7 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
       height: calc(100vh - 2.8rem);
       position: sticky;
       top: 2.8rem;
-      
+      width: 14rem;
     }
     
   }

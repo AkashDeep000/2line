@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const myLoader = ({ src, width, quality }) => {
-  return `https://cdn.statically.io/img/cdn.sharemyfeel.com/f=auto,w=${width},q=${quality || 75}/file/2liner/${src}`};
+  return `https://cdn.statically.io/img/cdn.sharemyfeel.com/f=auto,w=${width},q=${quality || 65}/file/2liner/${src}`};
   
 const shimmer = (w, h) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -37,6 +37,7 @@ export default function StatusCard() {
       alt="Picture of the author"
       width={500}
       height={500}
+      sizes="18rem"
       priority="true"
       placeholder="blur"
       blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}

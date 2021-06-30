@@ -1,6 +1,8 @@
 module.exports = {
   images: {
     domains: ['cdn.sharemyfeel.com'],
+    deviceSizes: [480, 560, 640, 720, 900, 1080],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   
  experimental: { optimizeCss: true },
