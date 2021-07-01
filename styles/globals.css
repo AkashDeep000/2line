@@ -133,8 +133,10 @@ body {
     user-select: none;
     overflow: auto;
     white-space: nowrap;
-    top: 2.8rem;
-    z-index: +998;
+    position: sticky;
+    top: 0.65rem;
+    z-index: +997;
+    transition: top 0.25s ease-in-out;
 }
   .scrollNav::-webkit-scrollbar {
     display: none;
@@ -160,6 +162,7 @@ body {
     top: 2.8rem;
     z-index: +998;
     box-shadow: 0 .5rem .5rem rgba(0,0,0,0.086);
+    transition: top 0.25s ease-in-out;
 }
 .tabNav a {
   background: var(--gradient);
@@ -242,7 +245,7 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
     padding: 0 1rem;
   }
   .cardImage {
-    
+    filter: none !important;
     border-radius: .35rem;
     
   }
@@ -274,6 +277,12 @@ text-shadow:0 0 2rem rgba(255,42,138,0.713);
     
     .header {
       box-shadow: 0 0 3rem rgba(0,0,0,0.15);
+    }
+    .navButton {
+      display: none;
+    }
+    .logo {
+      margin-left: .8rem;
     }
     .body {
       display: grid;

@@ -1,71 +1,15 @@
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import Header from "../components/Header.js";
-import StatusCard from "../components/StatusCard.js";
-import MobileMenu from "../components/MobileMenu.js";
-import Footer from "../components/Footer.js";
+import React, { useRef } from 'react';
+import useOnScreen from '../hooks/useOnScreen'
 
 export default function Home() {
+  const ref = useRef();
+  const inViewport = useOnScreen(ref, '0px'); 
+  if (inViewport) {
+        console.log('in viewport:', ref.current);
+        
+    }
   return (
-    <>
-<Header />
-<div class="body">
-   <div class="scrollNav">
-      <a href="#https://modapk.vercel.app">Attitude</a>
-      <a href="">Love</a>
-      <a href="">Sad</a>
-      <a href="">Funny</a>
-      <a href="">Best</a>
-      <a href="">Love</a>
-      <a href="">Sad</a>
-      <a href="">Funny</a>
-      <a href="">Best</a>
-   </div>
-   <div class="tabNav">
-      <a href="">
-         <button class="tabButtonWrap activeTabNav">
-            <div>Best</div>
-         </button>
-      </a>
-      <a href="">
-         <button class="tabButtonWrap">
-            <div>Trending</div>
-         </button>
-      </a>
-      <a href="">
-         <button class="tabButtonWrap">
-            <div>New</div>
-         </button>
-      </a>
-      <a href="">
-         <button class="tabButtonWrap">
-            <div>Videos</div>
-         </button>
-      </a>
-   </div>
-   <div class="sidebar">
-      <br />
-      ------------------sidebar------------------
-   </div>
-   <div class="content">
-      <div class="contentHead">
-         <h1>It is Header</h1>
-         <p></p>
-      </div>
-      <div class="contentBody">
-      
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      <StatusCard />
-      
-      </div>
-   </div>
-</div>
-<Footer />
-    </>
-  );
-}
+    <div ref={ref}>Test  {inViewport ? 'is in viewport' : ''}</div>
+        
+    )
+};

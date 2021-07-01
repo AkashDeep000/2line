@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { useRef } from 'react';
+import useOnScreen from '../hooks/useOnScreenOnce'
+
 
 const myLoader = ({ src, width, quality }) => {
   return `https://cdn.statically.io/img/cdn.sharemyfeel.com/f=auto,w=${width},q=${quality || 65}/file/2liner/${src}`};
@@ -23,6 +26,13 @@ const toBase64 = (str) =>
     : window.btoa(str)  
 
 export default function StatusCard() {
+  // for cheaking if elements are in view port
+  const ref = useRef();
+  const inViewport = useOnScreen(ref, '-100px'); 
+  if (inViewport) {
+        console.log('in viewport:', ref.current.id);
+        
+    }
   return (
     <>
          <div className="contentCard">
@@ -37,13 +47,14 @@ export default function StatusCard() {
       alt="Picture of the author"
       width={500}
       height={500}
+      layout="responsive"
       sizes="18rem"
       priority="true"
       placeholder="blur"
       blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
     />
   </div>
-  <div className="cardButtom">
+  <div ref={ref} id="1" className="cardButtom">
     <button>COPY</button>
     <button>DOWNLOAD</button>
     <button>EDIT</button>
