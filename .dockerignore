@@ -1,5 +1,7 @@
 Dockerfile
 .dockerignore
+.gitignore
+.gitignore.save
 node_modules
 npm-debug.log
 README.md
