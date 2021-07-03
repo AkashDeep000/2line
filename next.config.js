@@ -1,5 +1,5 @@
 module.exports = {
-  target: "serverless",
+  
   images: {
     domains: ['cdn.sharemyfeel.com'],
     deviceSizes: [480, 560, 640, 720, 900, 1080],

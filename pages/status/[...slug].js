@@ -11,18 +11,18 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  
+  console.log(params.slug)
   const post = "hello world"
-
+  const slug = params.slug.join('/')
   // Pass post data to the page via props
-  return { props: { post } }
+  return { props: { post , slug} }
 }
 
 
-function Post({ post }) {
+function Post({ post, slug}) {
     return (
     <>
-     Hello
+     Hello {slug}
     </>
   );
 }
