@@ -1,4 +1,3 @@
-
 #Creates a layer from node:alpine image.
 FROM node:alpine
 
